@@ -7,7 +7,7 @@ var pandocRenderer = function(data, options){
   // Since the markdown file is only rendered as body part,
   // the title is never used and thus does not matter
   var meta = ['-M', 'pagetitle=dummy'];
-  var math = '--mathjax';
+  var mathArgs = [];
 
   if(config) {
     if(config.extensions) {
@@ -48,18 +48,22 @@ var pandocRenderer = function(data, options){
       });
     }
 
+    var mathEngine = 'mathjax';
     if(config.mathEngine) {
       if(typeof config.mathEngine === 'string') {
-        math = '--' + config.mathEngine;
+        mathEngine = config.mathEngine;
       }
+    }
+    if (config.mathEngine !== null) {
+      mathArgs.push(mathEngine)
     }
   }
 
-  var args = [ '-f', 'markdown-smart'+extensions, '-t', 'html-smart', math]
+  var args = [ '-f', 'markdown-smart'+extensions, '-t', 'html-smart']
   .concat(filters)
   .concat(extra)
-  .concat(meta);
-
+  .concat(meta)
+  .concat(mathArgs);
 
   // if we are rendering a post,
   // `data` has the key `path`

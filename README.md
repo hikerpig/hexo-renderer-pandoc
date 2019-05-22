@@ -115,6 +115,16 @@ pandoc:
 
 Then, the args of pandoc is this: `[..., "--katex", ...]` .
 
+And if you don't want pandoc to process tex math, pass `null` to it:
+
+```
+pandoc:
+  mathEngine: null
+```
+
+So you can use katex's auto-render extension later in the browser.
+
+
 ## Issues related to Hexo Tags ##
 
 There are issues related to Hexo tags. If you are using them, this section may be at your concern.
