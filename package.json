@@ -1,11 +1,11 @@
 {
-  "name": "hexo-renderer-pandoc",
+  "name": "@hikerpig/hexo-renderer-pandoc",
   "version": "0.3.0",
   "main": "index",
   "author": {
-    "name": "Joseph Pan",
-    "email": "cs.wzpan@gmail.com",
-    "url": "http://hahack.com/"
+    "name": "hikerpig",
+    "email": "hikerpigwinnie@gmail.com",
+    "url": "https://github.com/hikerpig"
   },
   "tags": [
     "pandoc",
@@ -14,13 +14,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/wzpan/hexo-renderer-pandoc.git"
+    "url": "git://github.com/hikerpig/hexo-renderer-pandoc.git"
   },
   "bugs": {
-    "url": "http://github.com/wzpan/hexo-renderer-pandoc/issues"
+    "url": "http://github.com/hikerpig/hexo-renderer-pandoc/issues"
   },
   "dependencies": {},
   "readmeFilename": "README.md",
   "description": "hexo-renderer-pandoc",
-  "homepage": "https://github.com/wzpan/hexo-renderer-pandoc"  
+  "homepage": "https://github.com/hikerpig/hexo-renderer-pandoc",
+  "publishConfig": {
+    "access": "public"
+  }
 }
